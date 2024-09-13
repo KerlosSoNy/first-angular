@@ -41,9 +41,11 @@ export class AppNavBar {
 
 
   handleChange (event: HTMLInputElement ){
+    // if The Type of event is KeyboardEvent
     // let valueOfInput = (event.target as HTMLInputElement).value
     // this.title = valueOfInput
-    console.log(event?.value)
+
+    // if The Type of event is HTMLInputElement
     this.title = event?.value
   }
 }
