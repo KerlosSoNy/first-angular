@@ -31,6 +31,10 @@ export class AppNavBar {
   // 8 KeyCode for Backspace
   // 16 KeyCode for Shift
   // 17 KeyCode for Control
+  // 18 KeyCode for Alt
+  // 9 KeyCode for Tab
+  // 19 KeyCode for Pause/Break
+  // 20 KeyCode for Caps Lock
   keyPressUP(event: KeyboardEvent ){
     if(event.keyCode === 13){
       this.buttonClick()
