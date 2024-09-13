@@ -1,0 +1,20 @@
+<div class="flex flex-col items-center gap-2">
+  <img [src]="imgUrl" [alt]="imgUrl" title="NavBar url" class="w-[60px] h-[40px]"/>
+  <h1>{{title}}</h1>
+  <!-- Property binding -->
+  <button [disabled]="isDisabled" class="bg-red-500 p-2 rounded text-white">disabled button</button>
+  <!-- String interpolation {{ }} back string values always -->
+  <button disabled="{{isDisabled}}" class="bg-red-500 p-2 rounded text-white">{{counter}}</button>
+  <app-nav-ul></app-nav-ul>
+
+  <!-- Class binding -->
+  <button [class.active]="isActive" [class.no-active]="!isActive" [class.text-white]="from !== ''" >Click Me</button>
+
+  <!-- Event binding -->
+  <button (click)="buttonClick()">Click Me</button>
+  <input type="text" title="name" (keyup)="keyPressUP($event)"/>
+  <!-- This Well Update after Typing and get out of the input or press Enter -->
+  <!-- <input type="text" title="name" (change)="handleChange(input)" #input/> -->
+  <!-- This Will Update after Typing -->
+  <input type="text" title="name" (keyup)="handleChange(input)" #input/>
+</div>
