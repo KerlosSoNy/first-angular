@@ -1,11 +1,12 @@
 import { Component } from "@angular/core";
 import { NavUlComponent } from "../../components/nav-ul/nav-ul.components";
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: "app-navbar",
   standalone: true,
   templateUrl: './navbar.component.html',
-  imports: [NavUlComponent],
+  imports: [NavUlComponent,FormsModule],
   styleUrl: './navbar.component.css'
 })
 

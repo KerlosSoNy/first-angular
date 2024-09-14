@@ -21,4 +21,8 @@
 
   <!-- This Will Update after Typing -->
   <input type="text" title="name" class="w-[300px] border-collapse shadow-lg  shadow-red-500 rounded-lg h-[50px]" (keyup)="handleChange(input)" #input/>
+
+  <!-- Data Pinding ii -->
+   <!-- [(ngModel)] is updating the value automatically from the input but not forget to use FormsModule in The TS file -->
+   <input type="text" title="name" [(ngModel)]="title"/>
 </div>
