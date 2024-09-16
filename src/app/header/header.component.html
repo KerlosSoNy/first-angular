@@ -1,14 +1,53 @@
 <div>
   <h1>{{title}}</h1>
   <span>Directives are classes that add additional behavior to elements in your Angular applications.</span>
-  <div>
-    Component Directive
-  </div>
+  <div class="flex flex-col gap-3">
+    <div class="flex flex-col p-3 gap-3">
+      <span>Component Directive</span>
+      <p>calling component inside an component Like this Example </p>
+      <a href="https://angular.dev/guide/components" class="bg-blue-500 p-3 rounded w-fit mx-4">Component Directive</a>
+    </div>
+    <div class="flex flex-col p-3 gap-3">
+      <span>Structural Directive</span>
+      <p>Conditional component inside the dom or for loop inside doom like the following example</p>
+      <!-- Loop Example -->
+      <div class="flex flex-col bg-black text-white w-fit" *ngFor="let name of data">
+        <div class="flex flex-row gap-10">
+          <div>{{name.name}}</div>
+          <div>{{name.age}}</div>
+        </div>
+      </div>
 
-  <div class="flex flex-col" *ngFor="let name of data">
-    <div class="flex flex-row gap-10">
-      <div>{{name.name}}</div>
-      <div>{{name.age}}</div>
+      <!-- Conditional Example with *ngIf directive -->
+      <div class="flex flex-col bg-black text-white w-fit" *ngFor="let name of data">
+        <!-- This NgIf  -->
+        <div *ngIf="name.age < age; else message" class="flex flex-row gap-10">
+          <div>{{name.name}}</div>
+          <div>{{name.age}}</div>
+        </div>
+
+        <!-- This ng-template is an tool in angular allows you to create a custom component render later when you need it and it`s not rendered inside the DOM -->
+        <ng-template #message>
+          <div class="flex flex-row gap-10">
+            "No Data"
+          </div>
+        </ng-template>
+
+
+        <!-- @If and @else-->
+         @if (name.age < age){
+           <div class="flex flex-row gap-10">
+             <div>{{name.name}}</div>
+             <div>{{name.age}}</div>
+           </div>
+         } @else {
+           <div class="flex flex-row gap-10">
+             <div>"No Data"</div>
+           </div>
+         }
+
+      </div>
     </div>
   </div>
+
 </div>

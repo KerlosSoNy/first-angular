@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  title='Angular Directives';
-  data = [{name:'Zoniix', age: 28}, {name:'Ahmed', age: 10}, {name:'Mohamed', age: 23}];
+  title:string='Angular Directives';
+  age:number = 15;
+  data:{name:string, age:number}[] = [{name:'Zoniix', age: 28}, {name:'Ahmed', age: 10}, {name:'Mohamed', age: 23}];
 }
